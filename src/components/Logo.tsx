@@ -1,7 +1,12 @@
-export default function Logo() {
+export default function Logo({ className = "w-48" }: { className?: string }) {
   return (
     <>
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 569 99" className="w-45 h-auto">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 569 99"
+        className={`${className} h-auto`}
+        fill="currentColor"
+      >
         <path
           d="M51.3,0.3L54,5.5c-0.4-0.6-1.3-1.1-2.7-1.6c-1.4-0.5-3-0.9-4.8-1.3s-4-0.8-6.6-1.2H12.6c-0.5,1.1-0.9,2.4-1.1,4.1
     c-0.2,1.7-0.4,3.2-0.4,4.5v23.1h15.2c0.8,0,1.8-0.1,2.9-0.2c1.1-0.1,2.2-0.3,3.3-0.5c1.1-0.2,2-0.5,2.7-0.8s1.1-0.8,1.1-1.3v1.4v4

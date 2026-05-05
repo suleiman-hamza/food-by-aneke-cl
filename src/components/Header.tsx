@@ -50,35 +50,46 @@ export default function Header() {
     <div
       className={`fixed top-0 left-0 w-full z-100 transition-all duration-300 ${
         isScrolled
-          ? "bg-white/80 backdrop-blur-md py-2 shadow-sm border-b"
+          ? "bg-white/20 backdrop-blur-md py-2 shadow-sm border-b border-gray-300/30"
           : "bg-transparent py-4 border-transparent"
       }`}
     >
       <div className="flex p-4 gap- justify-between items-center">
-        <a href="#" className="border relative z-60">
+        <a
+          href="#"
+          className={`relative z-60 transition-colors duration-300 ${
+            isScrolled || isOpen ? "text-black" : "text-white"
+          }`}
+        >
           <Logo />
         </a>
         {/* <p>p: {isOpen.toString()}</p> */}
         <div className="border p-1 h-8 flex items-center justify-center relative z-60">
           <button
-            className="group relative flex flex-col gap-1.5"
+            className={`group relative flex flex-col gap-1.5 p-2 transition-colors duration-300 z-60 ${
+              isScrolled || isOpen ? "text-black" : "text-white"
+            }`}
             onClick={() => setIsOpen(!isOpen)}
           >
             {/* Top Bar */}
             <span
-              className={`h-0.5 w-8 bg-black transition-all duration-300 ${isOpen ? "rotate-45 translate-y-2" : ""}`}
+              className={`h-0.5 w-8 bg-current transition-all duration-300 ${
+                isOpen ? "rotate-45 translate-y-2" : ""
+              }`}
             ></span>
 
             {/* Middle Bar */}
             <span
-              className={`h-0.5 w-8 bg-black transition-all duration-300 ${
+              className={`h-0.5 w-8 bg-current transition-all duration-300 ${
                 isOpen ? "opacity-0" : "opacity-100"
               }`}
             ></span>
 
             {/* Bottom Bar */}
             <span
-              className={`h-0.5 w-8 bg-black transition-all duration-300 ${isOpen ? "-rotate-45 -translate-y-2" : ""}`}
+              className={`h-0.5 w-8 bg-current transition-all duration-300 ${
+                isOpen ? "-rotate-45 -translate-y-2" : ""
+              }`}
             ></span>
           </button>
         </div>
