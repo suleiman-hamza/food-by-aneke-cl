@@ -14,7 +14,7 @@ export default function Hero() {
           style={{ backgroundImage: `url(${FoodBanner})` }}
         ></div>
         <div className="z-11">
-          <h2 className="text-[24px]">Food</h2>
+          <h2 className="text-[24px] mb-2 font-alonira">Food</h2>
           <p className="">Amazing food for special occasions prepared with love</p>
         </div>
       </a>
@@ -27,7 +27,7 @@ export default function Hero() {
           style={{ backgroundImage: `url(${DineBanner})` }}
         ></div>
         <div className="z-11">
-          <h2 className="text-[24px]">Dine</h2>
+          <h2 className="text-[24px] mb-2 font-alonira">Dine</h2>
           <p className="">Reserve a seat at Forage The Pop-up</p>
         </div>
       </a>
@@ -40,7 +40,7 @@ export default function Hero() {
           style={{ backgroundImage: `url(${ForageBanner})` }}
         ></div>
         <div className="z-11">
-          <h2 className="text-[24px]">FORAGE</h2>
+          <h2 className="text-[24px] mb-2 font-alonira">FORAGE</h2>
           <p className="">Forage, cook, & dine experiences with Aneke</p>
         </div>
       </a>

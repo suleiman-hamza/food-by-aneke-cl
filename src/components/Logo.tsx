@@ -1,4 +1,4 @@
-export default function Logo({ className = "w-48" }: { className?: string }) {
+export default function Logo({ className = "w-40" }: { className?: string }) {
   return (
     <>
       <svg

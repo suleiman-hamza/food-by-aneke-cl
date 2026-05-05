@@ -60,7 +60,7 @@ export default function Header() {
           <Logo />
         </a>
         {/* <p>p: {isOpen.toString()}</p> */}
-        <div className="border p-1 h-8 flex items-center justify-center relative z-60">
+        <div className="h-8 flex items-center justify-center relative z-60">
           <button
             className={`group relative flex flex-col gap-1.5 p-2 transition-colors duration-300 z-60 ${activeColor}`}
             onClick={() => setIsOpen(!isOpen)}

@@ -1,5 +1,19 @@
 @import "tailwindcss";
 
+/* src/index.css */
+
+@font-face {
+  font-family: "EuAlonira";
+  src: url("./assets/fonts/Eu\ Alonira.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* 2. Tell Tailwind to create a utility class for it */
+@theme {
+  --font-alonira: "EuAlonira", sans-serif;
+}
 /* :root {
   --text: #6b6375;
   --text-h: #08060d;
