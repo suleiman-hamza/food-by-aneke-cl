@@ -1,11 +1,5 @@
 import Hero from "../components/Hero";
 
-const user = {
-  name: "Hedy Lamarr",
-  imageUrl: "https://react.dev/images/docs/scientists/yXOvdOSs.jpg",
-  imageSize: 90,
-};
-
 export default function Home() {
   return (
     <>
