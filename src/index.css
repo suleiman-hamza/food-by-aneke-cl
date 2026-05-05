@@ -21,7 +21,7 @@
 /* 2. Tell Tailwind to create a utility class for it */
 @theme {
   --font-alonira: "EuAlonira", sans-serif;
-  --font-mostra: "mostra-nuova", serif;
+  --font-mostra: "mostra-nuova", sans-serif;
 }
 
 .container {
@@ -31,6 +31,13 @@
   margin-right: auto;
   padding-right: 30px;
   padding-left: 30px;
+}
+
+body {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 1.7;
+  font-family: mostra-nuova, sans-serif;
 }
 /* :root {
   --text: #6b6375;

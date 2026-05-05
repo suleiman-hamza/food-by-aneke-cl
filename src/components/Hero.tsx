@@ -7,7 +7,7 @@ export default function Hero() {
     <section className="relative h-screen w-full flex flex-col items-center justify-center bg-gray-900 text-white">
       <a
         href="#"
-        className="flex-1 w-full flex justify-center items-center relative p-4 text-center"
+        className="flex-1 w-full flex justify-center items-center relative p-6 text-center"
       >
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat z-10 opacity-70"
@@ -15,12 +15,14 @@ export default function Hero() {
         ></div>
         <div className="z-11">
           <h2 className="text-[24px] mb-2 font-alonira">Food</h2>
-          <p className="">Amazing food for special occasions prepared with love</p>
+          <p className="font-mostra text-[20px]">
+            Amazing food for special occasions prepared with love
+          </p>
         </div>
       </a>
       <a
         href="#"
-        className="flex-1 w-full flex justify-center items-center relative p-4 text-center"
+        className="flex-1 w-full flex justify-center items-center relative p-6 text-center"
       >
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat z-10 opacity-70"
@@ -28,12 +30,12 @@ export default function Hero() {
         ></div>
         <div className="z-11">
           <h2 className="text-[24px] mb-2 font-alonira">Dine</h2>
-          <p className="">Reserve a seat at Forage The Pop-up</p>
+          <p className="font-mostra text-[20px]">Reserve a seat at Forage The Pop-up</p>
         </div>
       </a>
       <a
         href="#"
-        className="flex-1 w-full flex justify-center items-center relative p-4 text-center"
+        className="flex-1 w-full flex justify-center items-center relative p-6 text-center"
       >
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat z-10 opacity-70"
@@ -41,7 +43,7 @@ export default function Hero() {
         ></div>
         <div className="z-11">
           <h2 className="text-[24px] mb-2 font-alonira">FORAGE</h2>
-          <p className="">Forage, cook, & dine experiences with Aneke</p>
+          <p className="font-mostra text-[20px]">Forage, cook, & dine experiences with Aneke</p>
         </div>
       </a>
     </section>
