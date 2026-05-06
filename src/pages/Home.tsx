@@ -3,6 +3,21 @@ import SvgImage from "../assets/images/logo-forage-with-aneke-background.svg";
 import PopUpSvg from "../assets/images/logo-forage-pop-up.svg";
 import ForagePop from "../assets/images/forage-pop-up.jpg";
 import ForageExp from "../assets/images/the-experience.jpg";
+import ProfileScribble from "../assets/images/profile-photo-scribble.svg";
+import ProfilePhoto from "../assets/images/profile-picture.jpg";
+
+// import accreditation images
+import Biiab from "../assets/images/accreditation-BIIAB.jpg";
+import FHrating from "../assets/images/accreditation-Food-Hygeine-Rating-5.jpg";
+import FineFood from "../assets/images/accreditation-Guild-of-Fine-Food.jpg";
+import SurreyLife from "../assets/images/accreditation-Surrey-Life-Food-Drink.jpg";
+
+const accredItems = [
+  { id: 1, src: Biiab, title: "Signature Dish" },
+  { id: 3, src: FineFood, title: "Fresh Catch" },
+  { id: 4, src: SurreyLife, title: "Artisanal Pastry" },
+  { id: 2, src: FHrating, title: "Organic Greens" },
+];
 
 export default function Home() {
   return (
@@ -11,7 +26,7 @@ export default function Home() {
       <section className="py-10">
         <div className="container">
           <h2 className="font-alonira text-[24px] text-[#344e41] mb-8">
-            An experience to <span>treasure</span>
+            An experience to <span className="italic text-[#a3b18a]">treasure</span>
           </h2>
           <p className="font-mostra text-[20px]">
             We are all about food and how we experience it. We love introducing new flavours,
@@ -67,6 +82,9 @@ export default function Home() {
         <div className="container text-center">
           <img src={PopUpSvg} alt="svg the pop-up logo" className="w-25 h-25 mx-auto" />
           <h3 className="font-mostra text-white text-[22px] my-4">Next pop-up Date TBA</h3>
+          <h2 className="text-white text-[30px] font-alonira">
+            Pop-up <span className="italic text-[#a3b18a]">Dining</span>
+          </h2>
           <p className="text-white my-4 text-center">
             Walk in, relax, dine. Experience flavours with a twist. creating fabulous, delicious
             dishes on a tasting menu that will take you on a journey.
@@ -97,13 +115,44 @@ export default function Home() {
       <section className="py-10 bg-white">
         <div className="container text-center">
           <h2 className="font-alonira text-[24px] text-[#344e41] mb-8 text-center">
-            A Passion for <span>Food</span>
+            A Passion for <span className="italic text-[#a3b18a]">Food</span>
           </h2>
           <p className="font-mostra text-[20px]">
             Ever since I can remember, food has been my passion. From experiencing avocados for the
             first time in the 1970s through to foraging for ingredients locally, I still get excited
             about the possibilities and enjoyment that food brings.
           </p>
+          {/*acreditation*/}
+          <div className="border relative p-4 w-fit mx-auto mt-4">
+            <img
+              src={ProfileScribble}
+              alt="photo scribble"
+              className="absolute w-full h-auto inset-0"
+            />
+            <div className="relative flex justify-center items-center w-30 h-30">
+              <img
+                src={ProfilePhoto}
+                alt="profile photo of aneke"
+                className="w-full rounded-full"
+              />
+            </div>
+            <p>Aneke</p>
+          </div>
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-8 p-6 w-fit mx-auto border">
+            {accredItems.map((item) => (
+              <div key={item.id} className="group relative">
+                <img
+                  src={item.src}
+                  alt={item.title}
+                  className="w-25 object-contain transition-transform duration-500 group-hover:scale-110"
+                  // Fallback: If image fails, the background color of the parent div shows
+                  onError={(e) => {
+                    e.currentTarget.style.display = "none";
+                  }}
+                />
+              </div>
+            ))}
+          </div>
         </div>
       </section>
       <section className="py-10 bg-[#eceae5]">
