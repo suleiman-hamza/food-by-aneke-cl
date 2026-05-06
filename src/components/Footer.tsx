@@ -3,8 +3,8 @@ import FooterLogo from "./FooterLogo";
 export default function Footer() {
   return (
     <>
-      <footer className="bg-[#1f2421] py-12.5 font-mostra">
-        <div className="container">
+      <footer className="bg-[#1f2421] py-12 md:py-18 font-mostra">
+        <div className="container border border-white">
           <FooterLogo />
           {/* social logo */}
           <div className="flex justify-center items-center py-5">
@@ -28,13 +28,13 @@ export default function Footer() {
             </a>
           </div>
           {/*telphone*/}
-          <span className="font-mostra flex justify-center mb-4 text-center text-white text-[24px]">
+          <span className="font-mostra flex justify-center mb-4 md:mb-8 text-center text-white text-[24px]">
             <a href="tel:+2347085057435" className="text-[24px]">
               07085057435
             </a>
           </span>
           {/*copyright year*/}
-          <span className="flex justify-center mb-4 text-center text-white text-[20px]">
+          <span className="flex justify-center mb-4 md:mb-8 text-center text-white text-[20px]">
             <p>
               Copyright © Food by Aneke Limited. All Rights Reserved. Website by{" "}
               <a

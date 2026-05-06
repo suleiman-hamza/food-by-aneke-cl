@@ -123,7 +123,7 @@ export default function Home() {
             about the possibilities and enjoyment that food brings.
           </p>
           {/*acreditation*/}
-          <div className="border relative p-4 w-fit mx-auto mt-4">
+          <div className="relative p-4 w-fit mx-auto mt-4">
             <img
               src={ProfileScribble}
               alt="photo scribble"
@@ -138,7 +138,7 @@ export default function Home() {
             </div>
             <p>Aneke</p>
           </div>
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-8 p-6 w-fit mx-auto border">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 lg:gap-8 p-6 w-fit mx-auto">
             {accredItems.map((item) => (
               <div key={item.id} className="group relative">
                 <img
@@ -155,7 +155,9 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="py-10 bg-[#eceae5]">
+
+      {/*get in touch*/}
+      <section className="py-12 md:py-18 bg-[#eceae5]">
         <div className="container">
           <h2 className="text-center mb-4">
             <em className="text-[#a3b18a] block text-2xl">Lets talk food</em>
