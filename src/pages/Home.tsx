@@ -94,7 +94,7 @@ export default function Home() {
           </a>
         </div>
       </section>
-      <section className="py-10">
+      <section className="py-10 bg-white">
         <div className="container text-center">
           <h2 className="font-alonira text-[24px] text-[#344e41] mb-8 text-center">
             A Passion for <span>Food</span>
@@ -104,6 +104,33 @@ export default function Home() {
             first time in the 1970s through to foraging for ingredients locally, I still get excited
             about the possibilities and enjoyment that food brings.
           </p>
+        </div>
+      </section>
+      <section className="py-10 bg-[#eceae5]">
+        <div className="container">
+          <h2 className="text-center mb-4">
+            <em className="text-[#a3b18a] block text-2xl">Lets talk food</em>
+            <span className="text-[#344e41] text-[35px] font-alonira">Get in touch</span>
+          </h2>
+          <a
+            href="#"
+            className="text-center w-fit font-alonira text-[#344e41] hover:text-[#a3b18a] mx-auto flex gap-3 items-center group mb-2"
+          >
+            <span className="leading-none text-[12px] md:text-[16px] tracking-[3%]">BOOK NOW</span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 20 20"
+              className="transition-transform duration-300 ease-in-out group-hover:translate-x-1.5"
+            >
+              <path
+                fill="currentColor"
+                fill-rule="evenodd"
+                d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"
+              />
+            </svg>
+          </a>
         </div>
       </section>
     </>

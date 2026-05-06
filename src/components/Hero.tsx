@@ -4,7 +4,7 @@ import ForageBanner from "../assets/images/forage-banner.jpg";
 
 export default function Hero() {
   return (
-    <section className="relative h-screen w-full flex flex-col items-center justify-center bg-gray-900 text-white">
+    <section className="relative h-screen w-full flex flex-col items-center justify-center bg-[#1f2421] text-white">
       <a
         href="#"
         className="flex-1 w-full flex justify-center items-center relative p-6 text-center"
