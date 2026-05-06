@@ -4,7 +4,7 @@ export default function Footer() {
   return (
     <>
       <footer className="bg-[#1f2421] py-12 md:py-18 font-mostra">
-        <div className="container border border-white">
+        <div className="container">
           <FooterLogo />
           {/* social logo */}
           <div className="flex justify-center items-center py-5">

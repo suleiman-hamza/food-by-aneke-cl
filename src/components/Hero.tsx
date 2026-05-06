@@ -4,46 +4,50 @@ import ForageBanner from "../assets/images/forage-banner.jpg";
 
 export default function Hero() {
   return (
-    <section className="relative h-screen w-full flex flex-col items-center justify-center bg-[#1f2421] text-white">
+    <section className="relative h-screen w-full flex flex-col lg:flex-row justify-between bg-[#1f2421] text-white">
       <a
         href="#"
-        className="flex-1 w-full flex justify-center items-center relative p-6 text-center"
+        className="flex-1 w-full h-full flex justify-center items-center relative p-6 text-center group transition-all duration-300 ease-in-out hover:flex-[1.5]"
       >
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat z-10 opacity-70"
           style={{ backgroundImage: `url(${FoodBanner})` }}
         ></div>
-        <div className="z-11">
-          <h2 className="text-[24px] mb-2 font-alonira">Food</h2>
-          <p className="font-mostra text-[20px]">
+        <div className="z-11 max-w-75">
+          <h2 className="text-[24px] md:text-[48px] font-alonira">Food</h2>
+          <p className="font-mostra text-[18px] sm:text-[20px]">
             Amazing food for special occasions prepared with love
           </p>
         </div>
       </a>
       <a
         href="#"
-        className="flex-1 w-full flex justify-center items-center relative p-6 text-center"
+        className="flex-1 w-full flex justify-center items-center relative p-6 text-center transition-all duration-300 ease-in-out hover:flex-[1.5]"
       >
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat z-10 opacity-70"
           style={{ backgroundImage: `url(${DineBanner})` }}
         ></div>
-        <div className="z-11">
-          <h2 className="text-[24px] mb-2 font-alonira">Dine</h2>
-          <p className="font-mostra text-[20px]">Reserve a seat at Forage The Pop-up</p>
+        <div className="z-11 max-w-70">
+          <h2 className="text-[24px] md:text-[48px] mb-2 font-alonira">Dine</h2>
+          <p className="font-mostra text-[18px] sm:text-[20px]">
+            Reserve a seat at Forage The Pop-up
+          </p>
         </div>
       </a>
       <a
         href="#"
-        className="flex-1 w-full flex justify-center items-center relative p-6 text-center"
+        className="flex-1 w-full flex justify-center items-center relative p-6 text-center transition-all duration-300 ease-in-out hover:flex-[1.5]"
       >
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat z-10 opacity-70"
           style={{ backgroundImage: `url(${ForageBanner})` }}
         ></div>
-        <div className="z-11">
-          <h2 className="text-[24px] mb-2 font-alonira">FORAGE</h2>
-          <p className="font-mostra text-[20px]">Forage, cook, & dine experiences with Aneke</p>
+        <div className="z-11 max-w-75">
+          <h2 className="text-[24px] md:text-[48px] mb-2 font-alonira">FORAGE</h2>
+          <p className="font-mostra text-[18px] sm:text-[20px]">
+            Forage, cook, & dine experiences with Aneke
+          </p>
         </div>
       </a>
     </section>
