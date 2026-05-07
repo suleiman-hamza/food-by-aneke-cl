@@ -11,3 +11,17 @@
   flex: 0 0 100%;
   min-width: 0;
 }
+
+.embla__prev:disabled,
+.embla__next:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.embla__dot {
+  opacity: 0.5;
+}
+
+.embla__dot--selected {
+  opacity: 1;
+}
