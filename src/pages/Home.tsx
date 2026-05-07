@@ -11,6 +11,7 @@ import Biiab from "../assets/images/accreditation-BIIAB.jpg";
 import FHrating from "../assets/images/accreditation-Food-Hygeine-Rating-5.jpg";
 import FineFood from "../assets/images/accreditation-Guild-of-Fine-Food.jpg";
 import SurreyLife from "../assets/images/accreditation-Surrey-Life-Food-Drink.jpg";
+import Carousel from "../components/Carousel/Carousel";
 
 const accredItems = [
   { id: 1, src: Biiab, title: "Signature Dish" },
@@ -39,6 +40,7 @@ export default function Home() {
       </section>
 
       {/*carousel here*/}
+      <Carousel />
 
       {/*the forage experience*/}
       <section className="flex flex-col md:flex-row">
