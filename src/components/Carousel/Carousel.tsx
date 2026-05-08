@@ -55,25 +55,49 @@ export default function Carousel() {
                 Wedding
               </span>
             </div>
-            <div
-              className={`${styles.embla__slide} p-2 border w-full h-full flex justify-center items-center`}
-            >
-              Pop-up Dining
+            <div className={`${styles.embla__slide} w-full h-full relative`}>
+              <img
+                src={SquareWedding}
+                alt="square-wedding-image"
+                className="size-full object-cover"
+                // style={ clip-path: polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%); }
+              />
+              <span className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[#dad7cd] text-center text-4xl">
+                Pop-up Dining
+              </span>
             </div>
-            <div
-              className={`${styles.embla__slide} p-2 border w-full h-full flex justify-center items-center`}
-            >
-              Private Chef
+            <div className={`${styles.embla__slide} w-full h-full relative`}>
+              <img
+                src={SquareWedding}
+                alt="square-wedding-image"
+                className="size-full object-cover"
+                // style={ clip-path: polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%); }
+              />
+              <span className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[#dad7cd] text-center text-4xl">
+                Private Chef
+              </span>
             </div>
-            <div
-              className={`${styles.embla__slide} p-2 border w-full h-full flex justify-center items-center`}
-            >
-              Bespoke Evevnt
+            <div className={`${styles.embla__slide} w-full h-full relative`}>
+              <img
+                src={SquareWedding}
+                alt="square-wedding-image"
+                className="size-full object-cover"
+                // style={ clip-path: polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%); }
+              />
+              <span className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[#dad7cd] text-center text-4xl">
+                Bespoke Evevnt
+              </span>
             </div>
-            <div
-              className={`${styles.embla__slide} p-2 border w-full h-full flex justify-center items-center`}
-            >
-              Corporate
+            <div className={`${styles.embla__slide} w-full h-full relative`}>
+              <img
+                src={SquareWedding}
+                alt="square-wedding-image"
+                className="size-full object-cover"
+                // style={ clip-path: polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%); }
+              />
+              <span className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[#dad7cd] text-center text-4xl">
+                Corporate
+              </span>
             </div>
           </div>
         </div>
