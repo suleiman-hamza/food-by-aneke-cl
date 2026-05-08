@@ -180,7 +180,7 @@ export default function Home() {
             <span className="text-[#344e41] text-[35px] font-alonira">Get in touch</span>
           </h2>
           <a
-            href="#"
+            href="/contact"
             className="text-center w-fit font-alonira text-[#344e41] hover:text-[#a3b18a] mx-auto flex gap-3 items-center group mb-2"
           >
             <span className="leading-none text-[12px] md:text-[16px] tracking-[3%]">BOOK NOW</span>
