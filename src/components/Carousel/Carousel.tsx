@@ -5,6 +5,10 @@ import styles from "./Carousel.module.css";
 
 // import images
 import SquareWedding from "../../assets/images/square-weddings.jpg";
+import SquareCorporate from "../../assets/images/square-corporate.jpg";
+import SquareBespoke from "../../assets/images/square-bespoke-events.jpg";
+import SquarePrivateChef from "../../assets/images/square-private-chef.jpg";
+import SquarePopUp from "../../assets/images/square-pop-up-dining.jpg";
 
 export default function Carousel() {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: false });
@@ -40,7 +44,7 @@ export default function Carousel() {
   }, [emblaApi]);
 
   return (
-    <section className="container border font-alonira py-12 md:py-18">
+    <section className="container font-alonira py-12 md:py-18">
       <div className="embla">
         <div className={`${styles.embla__viewport} outline outline-blue-300 mb-4`} ref={emblaRef}>
           <div className={`${styles.embla__container} aspect-square`}>
@@ -57,8 +61,8 @@ export default function Carousel() {
             </div>
             <div className={`${styles.embla__slide} w-full h-full relative`}>
               <img
-                src={SquareWedding}
-                alt="square-wedding-image"
+                src={SquarePopUp}
+                alt="square-pop-up-image"
                 className="size-full object-cover"
                 // style={ clip-path: polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%); }
               />
@@ -68,8 +72,8 @@ export default function Carousel() {
             </div>
             <div className={`${styles.embla__slide} w-full h-full relative`}>
               <img
-                src={SquareWedding}
-                alt="square-wedding-image"
+                src={SquarePrivateChef}
+                alt="square-private-chef-image"
                 className="size-full object-cover"
                 // style={ clip-path: polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%); }
               />
@@ -79,8 +83,8 @@ export default function Carousel() {
             </div>
             <div className={`${styles.embla__slide} w-full h-full relative`}>
               <img
-                src={SquareWedding}
-                alt="square-wedding-image"
+                src={SquareBespoke}
+                alt="square-bespoke-3v3nt-image"
                 className="size-full object-cover"
                 // style={ clip-path: polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%); }
               />
@@ -90,8 +94,8 @@ export default function Carousel() {
             </div>
             <div className={`${styles.embla__slide} w-full h-full relative`}>
               <img
-                src={SquareWedding}
-                alt="square-wedding-image"
+                src={SquareCorporate}
+                alt="square-corporate-image"
                 className="size-full object-cover"
                 // style={ clip-path: polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%); }
               />
