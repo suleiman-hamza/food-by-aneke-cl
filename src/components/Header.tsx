@@ -96,35 +96,42 @@ export default function Header() {
           {/* Optional: A close button inside the menu if you want one,
       but your hamburger button already handles this! */}
 
-          <div className="flex flex-col items-center gap-8 text-3xl font-bold tracking-tight">
-            <a
-              href="/"
+          <div className="w-full p-6 px-8 flex flex-col gap-8 text-4xl tracking-tight text-white">
+            <Link
+              to="/"
               onClick={() => setIsOpen(false)}
               className="hover:text-orange-600 transition-colors"
             >
-              HOME
-            </a>
-            <a
-              href="/menu"
+              Home
+            </Link>
+            <Link
+              to="/menu"
               onClick={() => setIsOpen(false)}
               className="hover:text-orange-600 transition-colors"
             >
-              OUR MENU
-            </a>
-            <a
-              href="/orders"
+              Food
+            </Link>
+            <Link
+              to="/orders"
               onClick={() => setIsOpen(false)}
               className="hover:text-orange-600 transition-colors"
             >
-              ORDERS
-            </a>
-            <a
-              href="/about"
+              Forage
+            </Link>
+            <Link
+              to="/about"
               onClick={() => setIsOpen(false)}
               className="hover:text-orange-600 transition-colors"
             >
-              STORY
-            </a>
+              Stay
+            </Link>
+            <Link
+              to="/contact"
+              onClick={() => setIsOpen(false)}
+              className="hover:text-orange-600 transition-colors"
+            >
+              Contact
+            </Link>
           </div>
         </nav>
       </div>
