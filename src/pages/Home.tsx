@@ -12,6 +12,7 @@ import FHrating from "../assets/images/accreditation-Food-Hygeine-Rating-5.jpg";
 import FineFood from "../assets/images/accreditation-Guild-of-Fine-Food.jpg";
 import SurreyLife from "../assets/images/accreditation-Surrey-Life-Food-Drink.jpg";
 import Carousel from "../components/Carousel/Carousel";
+import { Link } from "react-router";
 
 const accredItems = [
   { id: 1, src: Biiab, title: "Signature Dish" },
@@ -59,8 +60,8 @@ export default function Home() {
               experienced guide, and then back to the paddock to cook lunch inspired by the day’s
               foraging.
             </p>
-            <a
-              href="#"
+            <Link
+              to="#"
               className="text-center w-fit font-alonira text-white hover:text-[#a3b18a] mx-auto flex gap-3 items-center group mb-2"
             >
               <span className="leading-none text-[12px] md:text-[16px] tracking-[3%]">
@@ -79,7 +80,7 @@ export default function Home() {
                   d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"
                 />
               </svg>
-            </a>
+            </Link>
           </div>
         </section>
       </section>
@@ -104,8 +105,8 @@ export default function Home() {
               Walk in, relax, dine. Experience flavours with a twist. creating fabulous, delicious
               dishes on a tasting menu that will take you on a journey.
             </p>
-            <a
-              href="#"
+            <Link
+              to="#"
               className="text-center w-fit font-alonira text-white hover:text-[#a3b18a] mx-auto flex gap-3 items-center group mb-2"
             >
               <span className="leading-none text-[12px] md:text-[16px] tracking-[3%]">
@@ -124,7 +125,7 @@ export default function Home() {
                   d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"
                 />
               </svg>
-            </a>
+            </Link>
           </div>
         </section>
       </section>
@@ -179,8 +180,8 @@ export default function Home() {
             <em className="text-[#a3b18a] block text-2xl">Lets talk food</em>
             <span className="text-[#344e41] text-[35px] font-alonira">Get in touch</span>
           </h2>
-          <a
-            href="/contact"
+          <Link
+            to="/contact"
             className="text-center w-fit font-alonira text-[#344e41] hover:text-[#a3b18a] mx-auto flex gap-3 items-center group mb-2"
           >
             <span className="leading-none text-[12px] md:text-[16px] tracking-[3%]">BOOK NOW</span>
@@ -197,7 +198,7 @@ export default function Home() {
                 d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"
               />
             </svg>
-          </a>
+          </Link>
         </div>
       </section>
     </>

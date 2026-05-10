@@ -106,7 +106,7 @@ export default function Carousel() {
           </div>
         </div>
 
-        <div className="border border-red-400 flex justify-between">
+        <div className="flex justify-between">
           <button
             className={`${styles.embla__prev} text-[12px] md:text-[18px] text-[#344e41] hover:text-[#a3b18a] group flex gap-2 items-center`}
             onClick={goToPrev}

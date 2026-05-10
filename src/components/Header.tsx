@@ -1,4 +1,5 @@
 import Logo from "./Logo";
+import { Link } from "react-router";
 import { useState } from "react";
 import { useEffect } from "react"; // Add useEffect to your imports
 
@@ -56,9 +57,9 @@ export default function Header() {
       }`}
     >
       <div className="flex p-4 gap- justify-between items-center">
-        <a href="#" className={`relative z-60 transition-colors duration-300 ${activeColor}`}>
+        <Link to="/" className={`relative z-60 transition-colors duration-300 ${activeColor}`}>
           <Logo />
-        </a>
+        </Link>
         {/* <p>p: {isOpen.toString()}</p> */}
         <div className="h-8 flex items-center justify-center relative z-60">
           <button

@@ -1,12 +1,13 @@
 import FoodBanner from "../assets/images/food-banner.jpg";
 import DineBanner from "../assets/images/dine-banner.jpg";
 import ForageBanner from "../assets/images/forage-banner.jpg";
+import { Link } from "react-router";
 
 export default function Hero() {
   return (
     <section className="relative h-screen w-full flex flex-col lg:flex-row justify-between bg-[#1f2421] text-white">
-      <a
-        href="#"
+      <Link
+        to="#"
         className="flex-1 w-full h-full flex justify-center items-center relative p-6 text-center group transition-all duration-300 ease-in-out hover:flex-[1.5]"
       >
         <div
@@ -19,9 +20,9 @@ export default function Hero() {
             Amazing food for special occasions prepared with love
           </p>
         </div>
-      </a>
-      <a
-        href="#"
+      </Link>
+      <Link
+        to="#"
         className="flex-1 w-full flex justify-center items-center relative p-6 text-center transition-all duration-300 ease-in-out hover:flex-[1.5]"
       >
         <div
@@ -34,9 +35,9 @@ export default function Hero() {
             Reserve a seat at Forage The Pop-up
           </p>
         </div>
-      </a>
-      <a
-        href="#"
+      </Link>
+      <Link
+        to="#"
         className="flex-1 w-full flex justify-center items-center relative p-6 text-center transition-all duration-300 ease-in-out hover:flex-[1.5]"
       >
         <div
@@ -49,7 +50,7 @@ export default function Hero() {
             Forage, cook, & dine experiences with Aneke
           </p>
         </div>
-      </a>
+      </Link>
     </section>
   );
 }
