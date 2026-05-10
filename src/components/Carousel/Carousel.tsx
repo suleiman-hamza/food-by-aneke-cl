@@ -25,9 +25,10 @@ export default function Carousel() {
     setNextButtonDisabled(!emblaApi.canScrollNext());
   };
 
-  const scrollTo = (index) => emblaApi?.scrollTo(index);
-  const setupSnaps = (emblaApi) => setScrollSnaps(emblaApi.scrollSnapList());
-  const setActiveSnap = (emblaApi) => setSelectedSnap(emblaApi.selectedScrollSnap());
+  const scrollTo = (index: number) => emblaApi?.scrollTo(index);
+  const setupSnaps = (emblaApi: EmblaCarouselType) => setScrollSnaps(emblaApi.scrollSnapList());
+  const setActiveSnap = (emblaApi: EmblaCarouselType) =>
+    setSelectedSnap(emblaApi.selectedScrollSnap());
 
   useEffect(() => {
     if (!emblaApi) return;
