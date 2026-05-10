@@ -53,6 +53,9 @@ export default function Carousel() {
                 src={SquareWedding}
                 alt="square-wedding-image"
                 className="size-full object-cover"
+                style={{
+                  clipPath: "polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)",
+                }}
                 // style={ clip-path: polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%); }
               />
               <span className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[#dad7cd] text-center text-4xl">
@@ -97,6 +100,7 @@ export default function Carousel() {
                 src={SquareCorporate}
                 alt="square-corporate-image"
                 className="size-full object-cover"
+
                 // style={ clip-path: polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%); }
               />
               <span className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[#dad7cd] text-center text-4xl">

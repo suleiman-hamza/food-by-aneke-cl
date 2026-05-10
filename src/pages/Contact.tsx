@@ -4,7 +4,10 @@ export default function Contact() {
     <>
       <section
         className="flex flex-col gap-4 justify-center items-center container min-h-[75vh] text-white text-center bg-cover bg-no-repeat bg-center bg-[#344e41]"
-        style={{ backgroundImage: `url(${ContactBanner})` }}
+        style={{
+          backgroundImage: `url(${ContactBanner})`,
+          clipPath: "polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)",
+        }}
       >
         <h1 className="text-[30px] font-alonira">Contact me</h1>
         <h3 className="font-alonira text-[18px]">We love hearing from you</h3>
