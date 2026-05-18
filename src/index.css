@@ -24,6 +24,12 @@
   --font-mostra: "mostra-nuova", sans-serif;
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 .container {
   max-width: 1840px;
   width: 100%;

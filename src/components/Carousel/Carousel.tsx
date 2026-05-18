@@ -46,20 +46,22 @@ export default function Carousel() {
 
   return (
     <section className="container font-alonira py-12 md:py-18">
-      <div className="embla">
-        <div className={`${styles.embla__viewport} outline outline-blue-300 mb-4`} ref={emblaRef}>
-          <div className={`${styles.embla__container} aspect-square`}>
+      <div className={`${styles.embla}`}>
+        <div className={`${styles.embla__viewport} mb-4`} ref={emblaRef}>
+          <div className={`${styles.embla__container}`}>
             <div className={`${styles.embla__slide} w-full h-full relative`}>
               <img
                 src={SquareWedding}
                 alt="square-wedding-image"
-                className="size-full object-cover"
+                className={`size-full object-cover ${styles.embla__img}`}
                 style={{
                   clipPath: "polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)",
                 }}
-                // style={ clip-path: polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%); }
               />
-              <span className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[#dad7cd] text-center text-4xl">
+              <div className={styles.embla__overlay} aria-hidden="true" />
+              <span
+                className={`${styles.embla__caption} absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[#dad7cd] text-center text-4xl lg:text-6xl`}
+              >
                 Wedding
               </span>
             </div>
@@ -67,10 +69,12 @@ export default function Carousel() {
               <img
                 src={SquarePopUp}
                 alt="square-pop-up-image"
-                className="size-full object-cover"
-                // style={ clip-path: polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%); }
+                className={`size-full object-cover ${styles.embla__img}`}
               />
-              <span className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[#dad7cd] text-center text-4xl">
+              <div className={styles.embla__overlay} aria-hidden="true" />
+              <span
+                className={`${styles.embla__caption} absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[#dad7cd] text-center text-4xl lg:text-6xl`}
+              >
                 Pop-up Dining
               </span>
             </div>
@@ -78,10 +82,12 @@ export default function Carousel() {
               <img
                 src={SquarePrivateChef}
                 alt="square-private-chef-image"
-                className="size-full object-cover"
-                // style={ clip-path: polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%); }
+                className={`size-full object-cover ${styles.embla__img}`}
               />
-              <span className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[#dad7cd] text-center text-4xl">
+              <div className={styles.embla__overlay} aria-hidden="true" />
+              <span
+                className={`${styles.embla__caption} absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[#dad7cd] text-center text-4xl lg:text-6xl`}
+              >
                 Private Chef
               </span>
             </div>
@@ -89,10 +95,12 @@ export default function Carousel() {
               <img
                 src={SquareBespoke}
                 alt="square-bespoke-3v3nt-image"
-                className="size-full object-cover"
-                // style={ clip-path: polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%); }
+                className={`size-full object-cover ${styles.embla__img}`}
               />
-              <span className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[#dad7cd] text-center text-4xl">
+              <div className={styles.embla__overlay} aria-hidden="true" />
+              <span
+                className={`${styles.embla__caption} absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[#dad7cd] text-center text-4xl lg:text-6xl`}
+              >
                 Bespoke Evevnt
               </span>
             </div>
@@ -100,11 +108,12 @@ export default function Carousel() {
               <img
                 src={SquareCorporate}
                 alt="square-corporate-image"
-                className="size-full object-cover"
-
-                // style={ clip-path: polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%); }
+                className={`size-full object-cover ${styles.embla__img}`}
               />
-              <span className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[#dad7cd] text-center text-4xl">
+              <div className={styles.embla__overlay} aria-hidden="true" />
+              <span
+                className={`${styles.embla__caption} absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[#dad7cd] text-center text-4xl lg:text-6xl`}
+              >
                 Corporate
               </span>
             </div>
