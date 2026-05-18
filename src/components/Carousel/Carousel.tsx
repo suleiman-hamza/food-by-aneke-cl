@@ -157,7 +157,7 @@ export default function Carousel() {
                     cy="12"
                     r="6"
                     fill="none"
-                    stroke="#2271d5"
+                    stroke="#344e41"
                     stroke-linecap="round"
                     stroke-linejoin="round"
                     stroke-width="2"
