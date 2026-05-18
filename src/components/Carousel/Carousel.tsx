@@ -14,34 +14,34 @@ export default function Carousel() {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: false });
   const [prevButtonDisabled, setPrevButtonDisabled] = useState(true);
   const [nextButtonDisabled, setNextButtonDisabled] = useState(true);
-  const [scrollSnaps, setScrollSnaps] = useState([]);
+  const [scrollSnaps, setScrollSnaps] = useState<number[]>([]);
   const [selectedSnap, setSelectedSnap] = useState(0);
 
   const goToPrev = () => emblaApi?.scrollPrev();
   const goToNext = () => emblaApi?.scrollNext();
 
-  const toggleButtonsDisabled = (emblaApi: EmblaCarouselType) => {
-    setPrevButtonDisabled(!emblaApi.canScrollPrev()); // eroor connected here
-    setNextButtonDisabled(!emblaApi.canScrollNext());
-  };
-
   const scrollTo = (index: number) => emblaApi?.scrollTo(index);
-  const setupSnaps = (emblaApi: EmblaCarouselType) => setScrollSnaps(emblaApi.scrollSnapList());
-  const setActiveSnap = (emblaApi: EmblaCarouselType) =>
-    setSelectedSnap(emblaApi.selectedScrollSnap());
 
   useEffect(() => {
     if (!emblaApi) return;
 
-    setupSnaps(emblaApi);
-    setActiveSnap(emblaApi);
+    const syncFromEmbla = (api: EmblaCarouselType) => {
+      setScrollSnaps(api.scrollSnapList());
+      setSelectedSnap(api.selectedScrollSnap());
+      setPrevButtonDisabled(!api.canScrollPrev());
+      setNextButtonDisabled(!api.canScrollNext());
+    };
 
-    toggleButtonsDisabled(emblaApi);
-    emblaApi.on("reInit", toggleButtonsDisabled);
-    emblaApi.on("select", toggleButtonsDisabled);
-    emblaApi.on("reInit", setupSnaps);
-    emblaApi.on("reInit", setActiveSnap);
-    emblaApi.on("select", setActiveSnap);
+    emblaApi.on("reInit", syncFromEmbla);
+    emblaApi.on("select", syncFromEmbla);
+
+    const frame = requestAnimationFrame(() => syncFromEmbla(emblaApi));
+
+    return () => {
+      cancelAnimationFrame(frame);
+      emblaApi.off("reInit", syncFromEmbla);
+      emblaApi.off("select", syncFromEmbla);
+    };
   }, [emblaApi]);
 
   return (
