@@ -3,18 +3,18 @@ export default function Contact() {
   return (
     <>
       <section
-        className="flex flex-col gap-4 justify-center items-center container min-h-[75vh] text-white text-center bg-cover bg-no-repeat bg-center bg-[#344e41]"
+        className="flex flex-col gap-4 justify-center items-center container h-[75vh] md:h-screen text-white text-center bg-cover bg-no-repeat bg-center bg-[#344e41]"
         style={{
-          backgroundImage: `url(${ContactBanner})`,
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(${ContactBanner})`,
           clipPath: "polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)",
         }}
       >
-        <h1 className="text-[30px] font-alonira">Contact me</h1>
-        <h3 className="font-alonira text-[18px]">We love hearing from you</h3>
-        <p className="text-[20px]">
+        <h1 className="text-[30px] md:text-7xl md:mb-6 font-alonira">Contact me</h1>
+        <h3 className="font-alonira text-[18px] md:text-[24px]">We love hearing from you</h3>
+        <p className="max-w-3xl text-[20px] sm:*text-[24px] md:text-[30px] font-mostra">
           Whether it is to enquire about an event, discuss foraging or simply to ask for recipes!
         </p>
-        <span className="">Aneke</span>
+        <span className="font-alonira">Aneke</span>
       </section>
       {/*more, bookings, find us-driection*/}
       <section className="py-12 md:py-18 text-[#344e41]">
