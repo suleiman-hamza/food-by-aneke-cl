@@ -1,29 +1,23 @@
-import SvgImage from "../assets/images/logo-forage-with-aneke-background.svg";
-import ForageExp from "../assets/images/the-experience.jpg";
-
+import PopUpSvg from "../assets/images/logo-forage-pop-up.svg";
+import ForagePop from "../assets/images/forage-pop-up.jpg";
 import { Link } from "react-router";
 
-export default function ForageExperirnce() {
+export default function PopUpDining() {
   return (
     <>
-      <section className="forage-sections">
+      <section className="">
         <div className="flex flex-col md:flex-row">
-          <a href="#" className="md:grid md:grid-cols-12">
-            <div className="md:col-span-6 w-full md:w-[calc(50vw+140px)]">
-              <img
-                src={ForageExp}
-                alt="foreage-the-experience"
-                className="object-cover w-full h-full"
-              />
-            </div>
-            <section className="py-10 bg-[#344e41] col-span-5 md:translate-y-20">
+          <a href="/" className="flex flex-col md:grid md:grid-cols-12">
+            <section className="order-2 md:order-0 py-10 bg-[#1f2421] col-span-5 col-start-2">
               <div className="text-center px-4">
-                <img src={SvgImage} alt="svg the experience logo" className="w-25 h-25 mx-auto" />
-                <h2 className="text-white text-[30px] font-alonira mt-4">Forage, Cook & Dine</h2>
+                <img src={PopUpSvg} alt="svg the pop-up logo" className="w-25 h-25 mx-auto" />
+                <h3 className="font-mostra text-white text-[22px] my-4">Next pop-up Date TBA</h3>
+                <h2 className="text-white text-[30px] font-alonira">
+                  Pop-up <span className="italic text-[#a3b18a] inline-block">Dining</span>
+                </h2>
                 <p className="text-white my-4 text-center">
-                  Walking in small groups with home-made, freshly foraged refreshments and a highly
-                  experienced guide, and then back to the paddock to cook lunch inspired by the
-                  day’s foraging.
+                  Walk in, relax, dine. Experience flavours with a twist. creating fabulous,
+                  delicious dishes on a tasting menu that will take you on a journey.
                 </p>
                 <Link
                   to="#"
@@ -48,6 +42,13 @@ export default function ForageExperirnce() {
                 </Link>
               </div>
             </section>
+            <div className="order-1 md:order-0 md:col-span-6 w-full">
+              <img
+                src={ForagePop}
+                alt="foreage-the-experience"
+                className="object-cover w-full h-full"
+              />
+            </div>
           </a>
         </div>
       </section>

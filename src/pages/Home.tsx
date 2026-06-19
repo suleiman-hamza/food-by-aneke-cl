@@ -1,6 +1,4 @@
 import Hero from "../components/Hero";
-import PopUpSvg from "../assets/images/logo-forage-pop-up.svg";
-import ForagePop from "../assets/images/forage-pop-up.jpg";
 
 import ProfileScribble from "../assets/images/profile-photo-scribble.svg";
 import ProfilePhoto from "../assets/images/profile-picture.jpg";
@@ -13,6 +11,7 @@ import SurreyLife from "../assets/images/accreditation-Surrey-Life-Food-Drink.jp
 import Carousel from "../components/Carousel/Carousel";
 import { Link } from "react-router";
 import ForageExperience from "../components/ForageExperience";
+import PopUpDining from "../components/PopUpDining";
 
 const accredItems = [
   { id: 1, src: Biiab, title: "Signature Dish" },
@@ -47,49 +46,8 @@ export default function Home() {
       <ForageExperience />
 
       {/*pop-up dining*/}
-      <section className="flex flex-col md:flex-row">
-        <div className="w-full">
-          <img
-            src={ForagePop}
-            alt="foreage-the-experience"
-            className="object-cover max-h-75 w-full"
-          />
-        </div>
-        <section className="py-10 bg-[#1f2421]">
-          <div className="container text-center">
-            <img src={PopUpSvg} alt="svg the pop-up logo" className="w-25 h-25 mx-auto" />
-            <h3 className="font-mostra text-white text-[22px] my-4">Next pop-up Date TBA</h3>
-            <h2 className="text-white text-[30px] font-alonira">
-              Pop-up <span className="italic text-[#a3b18a] inline-block">Dining</span>
-            </h2>
-            <p className="text-white my-4 text-center">
-              Walk in, relax, dine. Experience flavours with a twist. creating fabulous, delicious
-              dishes on a tasting menu that will take you on a journey.
-            </p>
-            <Link
-              to="#"
-              className="text-center w-fit font-alonira text-white hover:text-[#a3b18a] mx-auto flex gap-3 items-center group mb-2"
-            >
-              <span className="leading-none text-[12px] md:text-[16px] tracking-[3%]">
-                LEARN MORE
-              </span>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="20"
-                height="20"
-                viewBox="0 0 20 20"
-                className="transition-transform duration-300 ease-in-out group-hover:translate-x-1.5"
-              >
-                <path
-                  fill="currentColor"
-                  fill-rule="evenodd"
-                  d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"
-                />
-              </svg>
-            </Link>
-          </div>
-        </section>
-      </section>
+      <PopUpDining />
+
       <section className="py-12 md:py-20 bg-white">
         <div className="container text-center">
           <h2 className="font-alonira text-[24px] text-[#344e41] mb-8 text-center">
