@@ -1,8 +1,7 @@
 import Hero from "../components/Hero";
-import SvgImage from "../assets/images/logo-forage-with-aneke-background.svg";
 import PopUpSvg from "../assets/images/logo-forage-pop-up.svg";
 import ForagePop from "../assets/images/forage-pop-up.jpg";
-import ForageExp from "../assets/images/the-experience.jpg";
+
 import ProfileScribble from "../assets/images/profile-photo-scribble.svg";
 import ProfilePhoto from "../assets/images/profile-picture.jpg";
 
@@ -13,6 +12,7 @@ import FineFood from "../assets/images/accreditation-Guild-of-Fine-Food.jpg";
 import SurreyLife from "../assets/images/accreditation-Surrey-Life-Food-Drink.jpg";
 import Carousel from "../components/Carousel/Carousel";
 import { Link } from "react-router";
+import ForageExperience from "../components/ForageExperience";
 
 const accredItems = [
   { id: 1, src: Biiab, title: "Signature Dish" },
@@ -44,46 +44,7 @@ export default function Home() {
       <Carousel />
 
       {/*the forage experience*/}
-      <section className="flex flex-col md:flex-row">
-        <div className="w-full">
-          <img
-            src={ForageExp}
-            alt="foreage-the-experience"
-            className="object-cover max-h-75 w-full"
-          />
-        </div>
-        <section className="py-10 bg-[#344e41]">
-          <div className="container text-center">
-            <img src={SvgImage} alt="svg the experience logo" className="w-25 h-25 mx-auto" />
-            <p className="text-white my-4 text-center">
-              Walking in small groups with home-made, freshly foraged refreshments and a highly
-              experienced guide, and then back to the paddock to cook lunch inspired by the day’s
-              foraging.
-            </p>
-            <Link
-              to="#"
-              className="text-center w-fit font-alonira text-white hover:text-[#a3b18a] mx-auto flex gap-3 items-center group mb-2"
-            >
-              <span className="leading-none text-[12px] md:text-[16px] tracking-[3%]">
-                LEARN MORE
-              </span>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="20"
-                height="20"
-                viewBox="0 0 20 20"
-                className="transition-transform duration-300 ease-in-out group-hover:translate-x-1.5"
-              >
-                <path
-                  fill="currentColor"
-                  fill-rule="evenodd"
-                  d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"
-                />
-              </svg>
-            </Link>
-          </div>
-        </section>
-      </section>
+      <ForageExperience />
 
       {/*pop-up dining*/}
       <section className="flex flex-col md:flex-row">

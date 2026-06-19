@@ -37,6 +37,18 @@
   margin-right: auto;
   padding-right: 30px;
   padding-left: 30px;
+
+  @media (min-width: 1025px) {
+    padding-right: 100px;
+    padding-left: 100px;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .forage-sections .container,
+  .service-menu .container {
+    padding: 0;
+  }
 }
 
 body {
