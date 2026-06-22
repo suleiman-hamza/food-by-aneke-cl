@@ -95,7 +95,7 @@ export default function Home() {
 
       {/*get in touch*/}
       <CursorFollow cursorLabel="View">
-        <Link to="/contact" className="border block py-12 md:py-18 bg-[#eceae5]">
+        <Link to="/contact" className="block py-12 md:py-18 bg-[#eceae5]">
           <div className="container">
             <h2 className="text-center mb-4">
               <em className="text-[#a3b18a] block text-2xl">Lets talk food</em>

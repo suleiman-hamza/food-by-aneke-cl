@@ -1,5 +1,30 @@
 import ContactBanner from "../assets/images/banner-contact.jpg";
+import gsap from "gsap";
+import SplitText from "gsap/SplitText";
+import { useGSAP } from "@gsap/react";
+
 export default function Contact() {
+  useGSAP(() => {
+    const split = SplitText.create(".headline", {
+      type: "lines",
+      mask: "lines",
+      autoSplit: true,
+      onSplit(splitText) {
+        splitText.lines.forEach((line) => {
+          if (line.parentElement) line.parentElement.style.paddingBottom = "0.15em";
+        });
+        gsap.from(splitText.lines, {
+          yPercent: 100,
+          duration: 1,
+          stagger: 0.1,
+          ease: "power3.out",
+        });
+      },
+    });
+
+    return () => split.revert();
+  });
+
   return (
     <>
       <section
@@ -9,9 +34,11 @@ export default function Contact() {
           clipPath: "polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)",
         }}
       >
-        <h1 className="text-[30px] md:text-7xl md:mb-6 font-alonira">Contact me</h1>
-        <h3 className="font-alonira text-[18px] md:text-[24px]">We love hearing from you</h3>
-        <p className="max-w-3xl text-[20px] sm:*text-[24px] md:text-[30px] font-mostra">
+        <h1 className="headline text-[30px] md:text-7xl md:mb-6 font-alonira">Contact me</h1>
+        <h3 className="headline font-alonira text-[18px] md:text-[24px]">
+          We love hearing from you
+        </h3>
+        <p className="headline max-w-3xl text-[20px] sm:*text-[24px] md:text-[30px] font-mostra">
           Whether it is to enquire about an event, discuss foraging or simply to ask for recipes!
         </p>
         <span className="font-alonira">Aneke</span>

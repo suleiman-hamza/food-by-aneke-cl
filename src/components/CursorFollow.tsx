@@ -19,8 +19,9 @@ const CursorFollow = ({ children, className = "", cursorLabel = "View" }: Cursor
       const cursor = cursorRef.current;
       if (!container || !cursor) return;
 
-      // center the cursor on its own point, once
+      // center the cursor on its own point and spin it forever
       gsap.set(cursor, { xPercent: -50, yPercent: -50 });
+      gsap.to(cursor, { rotation: 360, repeat: -1, duration: 3, ease: "none" });
 
       const xTo = gsap.quickTo(cursor, "x", {
         duration: 0.5,
