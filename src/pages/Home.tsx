@@ -14,6 +14,10 @@ import ForageExperience from "../components/ForageExperience";
 import PopUpDining from "../components/PopUpDining";
 import CursorFollow from "../components/CursorFollow";
 
+import { useRef } from "react";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+
 const accredItems = [
   { id: 1, src: Biiab, title: "Signature Dish" },
   { id: 3, src: FineFood, title: "Fresh Catch" },
@@ -22,13 +26,32 @@ const accredItems = [
 ];
 
 export default function Home() {
+  const introRef = useRef<HTMLElement>(null);
+  const passionRef = useRef<HTMLElement>(null);
+
+  useGSAP(() => {
+    const fadeUp = (ref: React.RefObject<HTMLElement | null>) =>
+      gsap.from([ref.current!.querySelector("h2"), ref.current!.querySelector("p")], {
+        opacity: 0,
+        y: 40,
+        duration: 0.9,
+        stagger: 0.3,
+        ease: "power3.out",
+        scrollTrigger: { trigger: ref.current, start: "top 70%" },
+      });
+
+    fadeUp(introRef);
+    fadeUp(passionRef);
+  });
+
   return (
     <>
       <Hero />
-      <section className="py-12 md:py-20">
+
+      <section ref={introRef} className="py-12 md:py-20">
         <div className="container">
           <div className="max-w-lg mx-auto">
-            <h2 className="font-alonira text-[24px] md:text-[48px] leading-loose text-[#344e41] mb-8">
+            <h2 className="font-alonira text-[24px] md:text-[40px] leading-loose text-[#344e41] mb-8">
               An experience to <span className="italic text-[#a3b18a]">treasure</span>
             </h2>
             <p className="font-mostra text-[20px] md:text-[24px]">
@@ -49,16 +72,18 @@ export default function Home() {
       {/*pop-up dining*/}
       <PopUpDining />
 
-      <section className="py-12 md:py-20 bg-white">
+      <section ref={passionRef} className="py-12 md:py-20 bg-white">
         <div className="container text-center">
-          <h2 className="font-alonira text-[24px] text-[#344e41] mb-8 text-center">
-            A Passion for <span className="italic text-[#a3b18a]">Food</span>
-          </h2>
-          <p className="font-mostra text-[20px]">
-            Ever since I can remember, food has been my passion. From experiencing avocados for the
-            first time in the 1970s through to foraging for ingredients locally, I still get excited
-            about the possibilities and enjoyment that food brings.
-          </p>
+          <div className="max-w-lg mx-auto">
+            <h2 className="font-alonira text-[24px] md:text-[40px] leading-loose text-[#344e41] mb-8 text-center">
+              A Passion for <span className="italic text-[#a3b18a]">Food</span>
+            </h2>
+            <p className="font-mostra text-[20px] md:text-[24px]">
+              Ever since I can remember, food has been my passion. From experiencing avocados for
+              the first time in the 1970s through to foraging for ingredients locally, I still get
+              excited about the possibilities and enjoyment that food brings.
+            </p>
+          </div>
           {/*acreditation*/}
           <div className="relative p-4 w-fit mx-auto mt-4">
             <img

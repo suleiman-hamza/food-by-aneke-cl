@@ -5,9 +5,10 @@ import { router } from "./router";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import SplitText from "gsap/SplitText";
+import ScrollTrigger from "gsap/ScrollTrigger";
 import "./index.css";
 
-gsap.registerPlugin(useGSAP, SplitText);
+gsap.registerPlugin(useGSAP, SplitText, ScrollTrigger);
 
 const root = document.getElementById("root")!;
 
